@@ -6,7 +6,11 @@ spring:
     name: menu-service
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5433/spring_menus_hrms
+    url: jdbc:postgresql://localhost:5432/spring_menus_hrms
     username: postgres
     password: root
     initialization-mode: always
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
